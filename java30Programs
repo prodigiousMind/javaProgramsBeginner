@@ -1,0 +1,844 @@
+>>>>>>>>>>>>>>>>>>>>>>Program 1>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+    class q1{  
+        public static void main(String args[]){  
+         System.out.println("Hello, World!");  
+        }  
+    }  
+
+>>>>>>>>>>>>>>>>>>>>>>Program 2>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+// Java program for simple calculator
+
+import java.io.*;
+import java.lang.*;
+import java.lang.Math;
+import java.util.Scanner;
+public class q2 {
+
+  public static void main(String[] args)
+  {
+    // stores two numbers
+    double num1, num2;
+
+    // Take input from the user
+    Scanner sc = new Scanner(System.in);
+
+    System.out.println("Enter the numbers: ");
+
+    // take the inputs
+    num1 = sc.nextDouble();
+
+    num2 = sc.nextDouble();
+
+    System.out.println("Enter the operator (+,-,*,/,%)");
+
+    char op = sc.next().charAt(0);
+
+    double o = 0;
+
+    switch (op) {
+
+    // case to add two numbers
+    case '+':
+
+      o = num1 + num2;
+
+      break;
+
+    // case to subtract two numbers
+    case '-':
+
+      o = num1 - num2;
+
+      break;
+
+    // case to multiply two numbers
+    case '*':
+
+      o = num1 * num2;
+
+      break;
+
+    // case to divide two numbers
+    case '/':
+
+      o = num1 / num2;
+
+      break;
+
+    case '%':
+      o = num1 % num2;
+      break;
+
+    default:
+
+      System.out.println("You enter wrong input");
+
+      break;
+    }
+
+    System.out.println("The final result:");
+
+    System.out.println();
+
+    // print the final result
+    System.out.println(num1 + " " + op + " " + num2
+            + " = " + o);
+  }
+}
+
+
+>>>>>>>>>>>>>>>>>>>>>>Program 3>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+import java.util.*;
+public class q3
+{
+	public static void main(String[] args)
+	{
+		int num, end;
+		System.out.println("Enter the number: "); 
+		Scanner sc = new Scanner(System.in);
+		num = sc.nextInt();
+		end = sc.nextInt();
+		int i;
+		for(i = 1; i <= end; i++)
+		{
+			System.out.println(num +" * " + i + " = " + num*i);
+		}
+	}
+}
+
+>>>>>>>>>>>>>>>>>>>>>>Program 4>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+import java.util.Scanner;
+public class q4 {
+    public static void main(String[] args) {
+        System.out.print("Enter the radius of circle (r): ");
+        Scanner sn = new Scanner(System.in);
+        Double radius = sn.nextDouble();
+         
+        Double area = Math.PI * radius * radius;  
+	    Double perimeter = Math.PI * radius * 2;      
+        System.out.println("Areaof the cirlce is = "+area);
+	    System.out.println("Perimeter of the circle is = "+perimeter);
+    }
+}
+
+>>>>>>>>>>>>>>>>>>>>>>Program 5>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+import java.util.Scanner;
+public class q5 {
+
+ public static void main(String[] args)
+    {
+        Scanner scan = new Scanner(System.in);
+        System.out.print("Enter the first number: ");
+        double num1 = scan.nextDouble();
+        System.out.print("Enter the second number: ");
+        double num2 = scan.nextDouble();
+        System.out.print("Enter the third number: ");
+        double num3 = scan.nextDouble();
+        scan.close();
+        System.out.print("The average of entered numbers is:" + avrerageOfThree(num1, num2, num3) );
+    }
+
+  public static double avrerageOfThree(double a, double b, double c)
+    {
+        return (a + b + c) / 3;
+    }
+}
+
+>>>>>>>>>>>>>>>>>>>>>>Program 6>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+import java.io.*;
+
+public class q6 {
+
+	public static void main(String a[])
+	{
+		int x = 10;
+		int y = 5;
+		int temp = y;
+		y = x;
+		x = temp;
+		System.out.println("After swaping:"
+						+ " x = " + y + ", y = " + x);
+	}
+}
+
+
+
+>>>>>>>>>>>>>>>>>>>>>>Program 7>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+import java.util.*;
+public class q7 {  
+    public static void main(String[] args) {          
+	int x,y;
+	System.out.println("Enter two numbers: "); 
+	Scanner sc = new Scanner(System.in);
+	x = sc.nextInt(); 
+	y = sc.nextInt();
+	int ans = x==y ? 0 : x < y ? -1 : 1;
+	if (ans == 0){
+		System.out.println("Number 1 is equal to Number 2 (num1==num2)");
+	}
+	else if ( ans == -1){
+		System.out.println("Number 1 is less than Number 2 (num1<num2)");
+	}
+	else {
+		System.out.println("Number 1 is greater than Number 2 (num1>num2)");
+	} 
+ }
+}
+
+>>>>>>>>>>>>>>>>>>>>>>Program 8>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+import java.util.Scanner;
+
+public class q8
+{
+  public static void main(String args[])
+  {
+    int num;
+    System.out.println("Enter an Integer number:");
+    Scanner input = new Scanner(System.in);
+    num = input.nextInt();
+    if ( num % 2 == 0 )
+        System.out.println("Entered number is even");
+     else
+        System.out.println("Entered number is odd");
+  }
+}
+
+>>>>>>>>>>>>>>>>>>>>>>Program 9>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+import java.util.Scanner;
+class q9
+{
+	public static void main(String arg[])
+	
+	{
+             	 int x1,x2,y1,y2;
+	         double dis;
+	         Scanner sc=new Scanner(System.in);
+	         System.out.println("enter x1 point");
+                 x1=sc.nextInt();
+                 System.out.println("enter y1 point");
+                 y1=sc.nextInt();
+	         System.out.println("enter x2point");
+                 x2=sc.nextInt();
+	         System.out.println("enter y2 point");
+                 y2=sc.nextInt();
+		 dis=Math.sqrt((x2-x1)*(x2-x1) + (y2-y1)*(y2-y1));
+  	         System.out.println("distancebetween"+"("+x1+","+y1+"),"+"("+x2+","+y2+")===>"+dis);
+	}
+ 
+}
+
+>>>>>>>>>>>>>>>>>>>>>>Program 10>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+import java.util.Scanner;
+
+class q10
+{
+  public static void main(String args[])
+  {
+    int number,nTimes;
+    System.out.println("Enter a number: ");
+
+    
+    Scanner input = new Scanner(System.in);
+    number = input.nextInt();
+ System.out.println("Enter a number of times: ");
+	nTimes = input.nextInt();
+ System.out.println("Printing number "+number+" "+nTimes+" number of times: ");
+	for (int i=0 ; i < nTimes ; i++){
+		 System.out.println(number);
+	}
+		
+   
+  }
+}
+
+>>>>>>>>>>>>>>>>>>>>>>Program 11>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+import java.util.Scanner;
+
+class q11
+{
+  public static void main(String args[])
+  {
+    int number;
+    System.out.println("Enter a Nth number: ");
+
+
+    Scanner input = new Scanner(System.in);
+    number = input.nextInt();
+	int sum=0;
+	
+        for (int i=1 ; i <= number ; i++){
+                 sum = sum + i;
+        }
+	 System.out.println("Sum of Nth natural number is: "+sum);
+
+  }
+}
+
+>>>>>>>>>>>>>>>>>>>>>>Program 12>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+import java.util.Scanner;
+public class q12{    
+public static void toBinary(int decimal){    
+     int binary[] = new int[40];    
+     int index = 0;    
+     while(decimal > 0){    
+       binary[index++] = decimal%2;    
+       decimal = decimal/2;    
+     }    
+     for(int i = index-1;i >= 0;i--){    
+       System.out.print(binary[i]);    
+     }    
+System.out.println();//new line  
+}    
+public static void main(String args[]){ 
+int num;     
+System.out.println("Enter the number in decimal form: ");  
+Scanner sc = new Scanner(System.in);
+num = sc.nextInt();
+toBinary(num);
+
+}}  
+
+>>>>>>>>>>>>>>>>>>>>>>Program 13>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+import java.util.Scanner;
+public class q13 {
+ 
+    public static void main(String[] args) {
+        //three numbers
+        int a,b,c;
+        int smallest;
+ 	System.out.print("Enter three numbers: ");
+        Scanner sn = new Scanner(System.in);
+        a = sn.nextInt();
+        b = sn.nextInt();
+        c = sn.nextInt();
+        if(a<b) {
+            if(c<a) {
+                smallest = c;
+            } else {
+                smallest = a;
+            }
+        } else {
+            if(b<c) {
+                smallest = b;
+            } else {
+                smallest = c;
+            }
+        }
+         
+        System.out.println(smallest + " is the smallest.");
+    }
+}
+
+>>>>>>>>>>>>>>>>>>>>>>Program 14>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+import java.util.*;
+    class q14{  
+     public static void main(String args[]){  
+      int i,fact=1;  
+      int number;
+      System.out.print("Enter the number: ");
+      Scanner sn = new Scanner(System.in);
+      number = sn.nextInt();   
+      for(i=1;i<=number;i++){    
+          fact=fact*i;    
+      }    
+      System.out.println("Factorial of "+number+" is: "+fact);    
+     }  
+    }  
+
+>>>>>>>>>>>>>>>>>>>>>>Program 15>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+    import java.util.Scanner;  
+    public class q15   
+    {  
+    public static void main(String args[])  
+    {  
+    int number, digit, sum = 0;  
+    Scanner sc = new Scanner(System.in);  
+    System.out.print("Enter the number: ");  
+    number = sc.nextInt();  
+    while(number > 0)  
+    {  
+    digit = number % 10;  
+    sum = sum + digit;  
+    number = number / 10;  
+    }  
+    //prints the result  
+    System.out.println("Sum of Digits: "+sum);  
+    }  
+    }  
+
+>>>>>>>>>>>>>>>>>>>>>>Program 16>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+import java.util.Scanner;
+class q16{  
+ public static void main(String args[]){ 
+	String s1,s2;
+	System.out.println("Enter the two strings: ");  
+	Scanner sc = new Scanner(System.in);
+	s1=sc.nextLine();
+	s2=sc.nextLine();
+   
+   	String s3=s1.concat(s2);  
+   System.out.println(s3); 
+  }  
+} 
+
+>>>>>>>>>>>>>>>>>>>>>>Program 17>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+import java.util.Scanner;
+class q17{  
+ public static void main(String args[]){ 
+	String s1,s2;
+	System.out.println("Enter the two strings: ");  
+	Scanner sc = new Scanner(System.in);
+	s1 = sc.nextLine();
+	s2 = sc.nextLine();
+	
+   	System.out.println(strComp(s1, s2));
+  }  
+
+  public static String strComp(String s1, String s2){
+  	int l1=s1.length();
+	int l2=s2.length();
+   	int boolie = l1==l2 ? 1 : 0;
+  	 if (boolie==1){
+   		for (int i=0; i < l1; i++){
+   			if (s1.charAt(i)!=s2.charAt(i)){
+   				return "Not Equal Strings";
+   				
+   			}
+   		}
+   		return "Equal Strings";
+   	} else return "Not Equal Strings";
+  }
+} 
+
+>>>>>>>>>>>>>>>>>>>>>>Program 18>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+import java.lang.*;
+import java.io.*;
+import java.util.*;
+
+// Class of ReverseString
+class q18 {
+	public static void main(String[] args)
+	{
+		String str;
+		System.out.println("Enter the string: ");  
+		Scanner sc = new Scanner(System.in);
+		str = sc.nextLine();
+
+		// getBytes() method to convert string
+		// into bytes[].
+		byte[] strAsByteArray = str.getBytes();
+
+		byte[] result = new byte[strAsByteArray.length];
+
+		// Store result in reverse order into the
+		// result byte[]
+		for (int i = 0; i < strAsByteArray.length; i++)
+			result[i] = strAsByteArray[strAsByteArray.length - i - 1];
+
+		System.out.println(new String(result));
+	}
+}
+
+
+>>>>>>>>>>>>>>>>>>>>>>Program 19>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+import java.util.Scanner;
+public class q19 {
+
+    public static void main(String[] args) {
+        String toCalcStr;
+	System.out.println("Enter the string: ");  
+	Scanner sc = new Scanner(System.in);
+	toCalcStr = sc.nextLine();
+        count(toCalcStr);
+    }
+    public static void count(String x) {
+        char[] ch = x.toCharArray();
+        int letter = 0;
+        int space = 0;
+        int num = 0;
+        int otherchat = 0;
+        for (int i = 0; i < x.length(); i++) {
+            if (Character.isLetter(ch[i])) {
+                letter++;
+            } else if (Character.isDigit(ch[i])) {
+                num++;
+            } else if (Character.isSpaceChar(ch[i])) {
+                space++;
+            } else {
+                otherchat++;
+            }
+        }
+        System.out.println("The string is :"+x);
+        System.out.println("letter: " + letter);
+        System.out.println("space: " + space);
+        System.out.println("number: " + num);
+        System.out.println("other: " + otherchat);
+    }
+}
+
+>>>>>>>>>>>>>>>>>>>>>>Program 20>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+class q20 {
+	public static void main(String args[]) {
+		System.out.println("The Odd Numbers are:");
+		for (int i = 1; i <= 100; i++) {
+			if (i % 2 != 0) {
+				System.out.print(i + " ");
+			}
+		}
+	}
+}
+
+>>>>>>>>>>>>>>>>>>>>>>Program 21>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+import java.util.Scanner;
+
+public class q21{
+	public static void main(String[] args) {  
+		int number;
+		System.out.print("Enter the number: ");
+        	Scanner sn = new Scanner(System.in);
+        	number = sn.nextInt();
+		System.out.print(tellMePrimo(number));
+
+	}
+
+
+	public static String tellMePrimo(int number){
+		int div = number/2;
+
+		for (int i=2; i<=div;i++){
+			if ((number%i)==0){
+				return "\nThe number "+number+" is not prime number\n";
+				
+			}
+		}
+		return "\nIt's a prime number\n";
+	}
+}
+
+>>>>>>>>>>>>>>>>>>>>>>Program 22>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+import java.util.Scanner;
+public class q22 
+{
+    public static void main(String[] args) 
+    {
+        int len, p,ele;
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter length of an array:");
+        len = sc.nextInt();
+        int arr[] = new int[len+1];
+        System.out.println("Enter "+len+" elements:");
+        for(int i = 0; i < len; i++)
+        {
+            arr[i] = sc.nextInt();
+        }
+        
+        System.out.print("After inserting : ");
+        for(int i = 0; i <len; i++)
+        {
+		if (i==(len-1))  System.out.print(arr[i]);
+		else System.out.print(arr[i]+",");
+        }
+       
+        
+    }
+}
+
+>>>>>>>>>>>>>>>>>>>>>>Program 23>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+public class q23 {
+	static int arr[] = { 12, 3, 4, 15 };
+
+	static int sum()
+	{
+		int sum = 0; // initialize sum
+		int i;
+
+		for (i = 0; i < arr.length; i++)
+			sum += arr[i];
+
+		return sum;
+	}
+
+	public static void main(String[] args)
+	{
+		System.out.println("Sum of given array is "
+						+ sum());
+	}
+}
+
+
+>>>>>>>>>>>>>>>>>>>>>>Program 24>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+import java.lang.*;
+ public class q24 {
+ public static void main(String[] args)
+ {
+    int[] num_array = {50, -20, 0, 30, 40, 60, 50};
+    
+	if (num_array.length >= 2 && num_array[0] ==  num_array[num_array.length-1]){
+		System.out.println("Yes the first and last element is same");}
+	else System.out.println("No the first and last element is not same");
+ }
+}
+
+>>>>>>>>>>>>>>>>>>>>>>Program 25>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+import java.util.Arrays; 
+ public class q25 {
+ public static void main(String[] args)
+ {
+    int[] array_nums = {20, 30, 40};
+	System.out.println("Original Array: "+Arrays.toString(array_nums)); 
+	int x = array_nums[0];
+	array_nums[0] = array_nums[array_nums.length-1];
+	array_nums[array_nums.length-1] = x;
+	System.out.println("New array after swaping the first and last elements: "+Arrays.toString(array_nums));  
+ }
+}
+
+>>>>>>>>>>>>>>>>>>>>>>Program 26>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+public class q26 {
+	static class Pair {
+		int min;
+		int max;
+	}
+	static Pair getMinMax(int arr[], int n) {
+		Pair minmax = new Pair();
+		int i;
+		if (n == 1) {
+			minmax.max = arr[0];
+			minmax.min = arr[0];
+			return minmax;
+		}
+		if (arr[0] > arr[1]) {
+			minmax.max = arr[0];
+			minmax.min = arr[1];
+			minmax.min = arr[0];
+		}
+		for (i = 2; i < n; i++) {
+			if (arr[i] > minmax.max) {
+				minmax.max = arr[i];
+			} else if (arr[i] < minmax.min) {
+				minmax.min = arr[i];
+			}
+		}
+		return minmax;
+	}
+	public static void main(String args[]) {
+		int arr[] = {1000, 11, 445, 1, 330, 3000};
+		int arr_size = 6;
+		Pair minmax = getMinMax(arr, arr_size);
+		System.out.printf("\nMinimum element is %d", minmax.min);
+		System.out.printf("\nMaximum element is %d", minmax.max);
+	}
+}
+
+
+>>>>>>>>>>>>>>>>>>>>>>Program 27>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+import java.util.*; 
+public class q27 {
+ public static void main(String[] args)
+ {
+    int[] nums = {5, 7, 2, 4, 9};
+    int ctr_even = 0, ctr_odd = 0;
+    System.out.println("Original Array: "+Arrays.toString(nums)); 
+        
+    for(int i = 0; i < nums.length; i++) {
+        if(nums[i] % 2 == 0)
+        {         
+          ctr_even++;
+        }
+        else
+           ctr_odd++;   
+    }                 
+    System.out.printf("\nNumber of even elements in the array: %d",ctr_even);
+    System.out.printf("\nNumber of odd elements in the array: %d",ctr_odd);
+    System.out.printf("\n");    
+  }
+}
+
+
+>>>>>>>>>>>>>>>>>>>>>>Program 28>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+import java.util.Scanner;
+ 
+class q28
+{
+   public static void main(String args[])
+   {
+      String str, rev = "";
+      Scanner sc = new Scanner(System.in);
+ 
+      System.out.println("Enter a string:");
+      str = sc.nextLine();
+ 
+      int length = str.length();
+ 
+      for ( int i = length - 1; i >= 0; i-- )
+         rev = rev + str.charAt(i);
+ 
+      if (str.equals(rev))
+         System.out.println(str+" is a palindrome");
+      else
+         System.out.println(str+" is not a palindrome");
+ 
+   }
+}
+
+>>>>>>>>>>>>>>>>>>>>>>Program 29>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+    public class q29{  
+    public static void main(String args[]){  
+    //creating two matrices    
+    int a[][]={{1,1,1},{2,2,2},{3,3,3}};    
+    int b[][]={{4,4,4},{5,5,5},{6,6,6}};    
+        
+    //creating another matrix to store the multiplication of two matrices    
+    int c[][]=new int[3][3];  //3 rows and 3 columns  
+        
+    //multiplying and printing multiplication of 2 matrices    
+    for(int i=0;i<3;i++){    
+    for(int j=0;j<3;j++){    
+    c[i][j]=0;      
+    for(int k=0;k<3;k++)      
+    {      
+    c[i][j]+=a[i][k]*b[k][j];      
+    }//end of k loop  
+    System.out.print(c[i][j]+" ");  //printing matrix element  
+    }//end of j loop  
+    System.out.println();//new line    
+    }    
+    }}  
+
+>>>>>>>>>>>>>>>>>>>>>>Program 30>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+import java.util.Scanner;
+public class q30
+{
+    public static void main(String[] args) 
+    {
+        int len, p,ele;
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter length of an array:");
+        len = sc.nextInt();
+        int arr[] = new int[len+1];
+        System.out.println("Enter "+len+" elements:");
+        for(int i = 0; i < len; i++)
+        {
+            arr[i] = sc.nextInt();
+        }
+        
+        System.out.print("Generated array : ");
+        for(int i = 0; i <len; i++)
+        {
+		if (i==(len-1))  System.out.print(arr[i]);
+		else System.out.print(arr[i]+",");
+        }
+
+	for(int i = 0; i <len; i++)
+        {
+        int half=arr[i]/2;
+		if (tellMePrimo(arr[i], half)==1) System.out.print("\nA prime number :"+arr[i]+"\n");
+        else System.out.print("\nNot a prime number :"+arr[i]+"\n");
+        }
+    }
+	public static int tellMePrimo(int num, int half){
+		  for (int j=2; j<=half; j++){
+		      if (num%j==0)  return 0;
+             
+		  }
+	       return 1;
+         }
+       
+}
+
+>>>>>>>>>>>>>>>>>>>>>>Program 31>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+    public class q31 {    
+        public static void main(String[] args) {        
+                
+            //Initialize array     
+            int [] arr = new int [] {5, 2, 8, 7, 1};     
+            int temp = 0;    
+                
+            //Displaying elements of original array    
+            System.out.println("Elements of original array: ");    
+            for (int i = 0; i < arr.length; i++) {     
+                System.out.print(arr[i] + " ");    
+            }    
+                
+            //Sort the array in ascending order    
+            for (int i = 0; i < arr.length; i++) {     
+                for (int j = i+1; j < arr.length; j++) {     
+                   if(arr[i] > arr[j]) {    
+                       temp = arr[i];    
+                       arr[i] = arr[j];    
+                       arr[j] = temp;    
+                   }     
+                }     
+            }    
+              
+            System.out.println();    
+                
+            //Displaying elements of array after sorting    
+            System.out.println("Elements of array sorted in ascending order: ");    
+            for (int i = 0; i < arr.length; i++) {     
+                System.out.print(arr[i] + " ");    
+            }    
+        }    
+    }    
